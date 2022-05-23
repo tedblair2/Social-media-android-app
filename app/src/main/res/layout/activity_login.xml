@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="top"
+    android:padding="12dp"
+    tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        app:srcCompat="@drawable/iconname" />
+
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="15dp"/>
+
+    <EditText
+        android:id="@+id/emailtext"
+        android:background="@drawable/edittext"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Email" />
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="15dp"/>
+
+    <EditText
+        android:id="@+id/passwordtext"
+        android:background="@drawable/edittext"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Password" />
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="15dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login_btn"
+        android:background="@drawable/button_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:padding="10dp"/>
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="15dp"/>
+
+    <TextView
+        android:id="@+id/register_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="Don't have an account?" />
+
+</LinearLayout>
