@@ -13,16 +13,21 @@
         <entry key="..\:/Users/user/Downloads/Android studio projects/Newinstagram/app/src/main/res/drawable/button_background.xml" value="0.215625" />
         <entry key="..\:/Users/user/Downloads/Android studio projects/Newinstagram/app/src/main/res/drawable/edittext.xml" value="0.215625" />
         <entry key="..\:/Users/user/Downloads/Android studio projects/Newinstagram/app/src/main/res/layout/activity_comment.xml" value="0.1671195652173913" />
+        <entry key="..\:/Users/user/Downloads/Android studio projects/Newinstagram/app/src/main/res/layout/activity_edit.xml" value="0.18" />
+        <entry key="..\:/Users/user/Downloads/Android studio projects/Newinstagram/app/src/main/res/layout/activity_followers.xml" value="0.19021739130434784" />
         <entry key="..\:/Users/user/Downloads/Android studio projects/Newinstagram/app/src/main/res/layout/activity_login.xml" value="0.18478260869565216" />
         <entry key="..\:/Users/user/Downloads/Android studio projects/Newinstagram/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/user/Downloads/Android studio projects/Newinstagram/app/src/main/res/layout/activity_options.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/user/Downloads/Android studio projects/Newinstagram/app/src/main/res/layout/activity_post.xml" value="0.2" />
         <entry key="..\:/Users/user/Downloads/Android studio projects/Newinstagram/app/src/main/res/layout/activity_register.xml" value="0.18885869565217392" />
         <entry key="..\:/Users/user/Downloads/Android studio projects/Newinstagram/app/src/main/res/layout/activity_start.xml" value="0.18478260869565216" />
         <entry key="..\:/Users/user/Downloads/Android studio projects/Newinstagram/app/src/main/res/layout/comment_item.xml" value="0.2" />
         <entry key="..\:/Users/user/Downloads/Android studio projects/Newinstagram/app/src/main/res/layout/fragment_home.xml" value="0.18478260869565216" />
         <entry key="..\:/Users/user/Downloads/Android studio projects/Newinstagram/app/src/main/res/layout/fragment_notification.xml" value="0.18478260869565216" />
+        <entry key="..\:/Users/user/Downloads/Android studio projects/Newinstagram/app/src/main/res/layout/fragment_post_detail.xml" value="0.15443840579710144" />
         <entry key="..\:/Users/user/Downloads/Android studio projects/Newinstagram/app/src/main/res/layout/fragment_profile.xml" value="0.2" />
         <entry key="..\:/Users/user/Downloads/Android studio projects/Newinstagram/app/src/main/res/layout/fragment_search.xml" value="0.18478260869565216" />
+        <entry key="..\:/Users/user/Downloads/Android studio projects/Newinstagram/app/src/main/res/layout/notification_item.xml" value="0.15443840579710144" />
         <entry key="..\:/Users/user/Downloads/Android studio projects/Newinstagram/app/src/main/res/layout/photo_item.xml" value="0.14673913043478262" />
         <entry key="..\:/Users/user/Downloads/Android studio projects/Newinstagram/app/src/main/res/layout/post_item.xml" value="0.1671195652173913" />
         <entry key="..\:/Users/user/Downloads/Android studio projects/Newinstagram/app/src/main/res/layout/tag_item.xml" value="0.17617753623188406" />

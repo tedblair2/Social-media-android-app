@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Newinstagram">
         <activity
+            android:name=".OptionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FollowersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditActivity"
+            android:exported="false" />
+        <activity
             android:name=".CommentActivity"
             android:exported="false" />
         <activity
@@ -37,8 +46,8 @@
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
     </application>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>

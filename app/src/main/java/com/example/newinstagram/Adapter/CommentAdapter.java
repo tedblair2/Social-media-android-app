@@ -61,8 +61,6 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
         Comment comment=mComment.get(position);
         holder.comment.setText(comment.getComment());
 
-        Log.d("COMMENT ADAPTER", "message is : "+comment.getPublisher());
-
 
         FirebaseDatabase.getInstance().getReference().child("Users").child(comment.getPublisher())
                 .addValueEventListener(new ValueEventListener() {

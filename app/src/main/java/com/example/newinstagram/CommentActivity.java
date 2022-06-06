@@ -11,6 +11,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -65,6 +66,8 @@ public class CommentActivity extends AppCompatActivity {
             }
         });
 
+        Log.d("COMMENT ACTIVITY", "in on create");
+
         Intent intent=getIntent();
         postId=intent.getStringExtra("postId");
         authorid=intent.getStringExtra("authorId");
@@ -73,8 +76,10 @@ public class CommentActivity extends AppCompatActivity {
         recyclerview.setHasFixedSize(true);
         recyclerview.setLayoutManager(new LinearLayoutManager(this));
 
+        Comment dummyComment = new Comment("123", "random comment","V9OtGXE61pdwz2II7f4rN7vUqRv2V9OtGXE61pdwz2II7f4rN7vUqRv2");
 
-        comments=new ArrayList<>();
+        comments=new ArrayList<Comment>();
+        comments.add(dummyComment);
         commentAdapter=new CommentAdapter(this,comments,postId);
         recyclerview.setAdapter(commentAdapter);
 
@@ -124,9 +129,14 @@ public class CommentActivity extends AppCompatActivity {
 
         HashMap<String,Object> map=new HashMap<>();
 
+        Log.d("COMMENT ACTIVITY", "trying to put comment");
+
         DatabaseReference ref=FirebaseDatabase.getInstance().getReference().child("Comments").child(postId);
 
+        Log.d("COMMENT ACTIVITY", "ref: "+ref.toString());
+
         String id=ref.push().getKey();
+        Log.d("COMMENT ACTIVITY", "id: "+id);
         map.put("commentId",id);
         map.put("Comment",addtext.getText().toString());
         map.put("Publisher",fUser.getUid());

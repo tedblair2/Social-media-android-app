@@ -26,11 +26,15 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4' //material edittext dependancy
     implementation 'de.hdodenhof:circleimageview:3.1.0'//circle imageview dependency
     implementation 'com.squareup.picasso:picasso:2.8'//for loading the image in the method in useradapter class
     implementation "com.hendraanggrian.appcompat:socialview:0.2" // base library
@@ -45,6 +49,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics:21.0.0'
     implementation 'com.google.firebase:firebase-functions:20.1.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'

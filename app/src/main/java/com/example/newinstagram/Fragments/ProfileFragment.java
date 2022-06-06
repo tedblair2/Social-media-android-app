@@ -1,6 +1,7 @@
 package com.example.newinstagram.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -20,8 +21,11 @@ import android.widget.TextView;
 
 import com.example.newinstagram.Adapter.PhotoAdapter;
 import com.example.newinstagram.Adapter.PostAdapter;
+import com.example.newinstagram.EditActivity;
+import com.example.newinstagram.FollowersActivity;
 import com.example.newinstagram.Model.Post;
 import com.example.newinstagram.Model.User;
+import com.example.newinstagram.OptionsActivity;
 import com.example.newinstagram.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -72,6 +76,7 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_profile, container, false);
+        fUsers=FirebaseAuth.getInstance().getCurrentUser();
 
         String data=getContext().getSharedPreferences("PROFILE", Context.MODE_PRIVATE).getString("profileId","none");
 
@@ -80,7 +85,6 @@ public class ProfileFragment extends Fragment {
         }else{
             profileId=data;
         }
-        fUsers= FirebaseAuth.getInstance().getCurrentUser();
 
         imageprofile=view.findViewById(R.id.profile_image);
         username=view.findViewById(R.id.username_profile);
@@ -110,6 +114,13 @@ public class ProfileFragment extends Fragment {
         postAdapter=new PhotoAdapter(getContext(),saved_posts);
         recyclerView_saves.setAdapter(photoAdapter);
 
+        options.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), OptionsActivity.class));
+            }
+        });
+
 
 
 
@@ -124,7 +135,7 @@ public class ProfileFragment extends Fragment {
             public void onClick(View view) {
                 String btn_txt=editprofile.getText().toString();
                 if (btn_txt.equals("Edit Profile")){
-                    //go to edit profile
+                    startActivity(new Intent(getContext(), EditActivity.class));
                 }else{
                     if (btn_txt.equals("follow")){
                         FirebaseDatabase.getInstance().getReference().child("follow")
@@ -164,6 +175,25 @@ public class ProfileFragment extends Fragment {
         getPostCount();
         myPhotos();
         getSavedPosts();
+
+        followers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getContext(), FollowersActivity.class);
+                intent.putExtra("id",profileId);
+                intent.putExtra("title","followers");
+                startActivity(intent);
+            }
+        });
+        following.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getContext(), FollowersActivity.class);
+                intent.putExtra("id",profileId);
+                intent.putExtra("title","following");
+                startActivity(intent);
+            }
+        });
 
         return view;
     }

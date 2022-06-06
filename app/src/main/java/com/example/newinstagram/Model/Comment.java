@@ -2,8 +2,8 @@ package com.example.newinstagram.Model;
 
 public class Comment {
     private String commentId;
-    private String Comment;
-    private String Publisher;
+    private String comment;
+    private String publisher;
 
 
     public Comment() {
@@ -11,8 +11,8 @@ public class Comment {
 
     public Comment(String commentId, String comment, String publisher) {
         this.commentId = commentId;
-        Comment = comment;
-        Publisher = publisher;
+        this.comment = comment;
+        this.publisher = publisher;
     }
 
     public String getCommentId() {
@@ -24,18 +24,18 @@ public class Comment {
     }
 
     public String getComment() {
-        return Comment;
+        return this.comment;
     }
 
     public void setComment(String comment) {
-        Comment = comment;
+        this.comment = comment;
     }
 
     public String getPublisher() {
-        return Publisher;
+        return this.publisher;
     }
 
     public void setPublisher(String publisher) {
-        Publisher = publisher;
+        this.publisher = publisher;
     }
 }
